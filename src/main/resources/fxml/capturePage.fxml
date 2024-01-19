@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<AnchorPane xmlns="http://javafx.com/javafx/18"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.view.CaptureViewController"
+            AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+    <VBox fx:id="pageArea" styleClass="backdrop" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+        <VBox fx:id="previewPane" styleClass="panel" minWidth="100">
+            <AnchorPane fx:id="previewContainer" style="-fx-background-color: black" minWidth="100" VBox.vgrow="ALWAYS">
+                <ImageView fx:id="previewImageView" preserveRatio="true"/>
+            </AnchorPane>
+        </VBox>
+
+        <VBox fx:id="saveImagePanel" styleClass="panel" prefHeight="200">
+            <Label text="Capture Image" styleClass="heading" maxWidth="Infinity"/>
+            <VBox styleClass="content" VBox.vgrow="ALWAYS">
+                <Button fx:id="chooseDirectoryButton" onAction="#handleChooseDirectoryButton" text="Choose Directory">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-folder2-open"/>
+                    </graphic>
+                </Button>
+                <Button fx:id="saveImageButton" onAction="#handleSaveImageButton" text="Save Image">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-download"/>
+                    </graphic>
+                </Button>
+                <Label fx:id="directoryLabel">
+
+                </Label>
+            </VBox>
+        </VBox>
+
+    </VBox>
+</AnchorPane>

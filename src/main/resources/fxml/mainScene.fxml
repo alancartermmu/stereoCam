@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.ToggleSwitch?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<HBox
+        fx:controller="controller.view.GlobalViewController"
+        id="mainWindow" stylesheets="@../css/stylesheet.css"
+        xmlns="http://javafx.com/javafx/18"
+        xmlns:fx="http://javafx.com/fxml/1"
+        prefWidth="1000"
+        prefHeight="600">
+    <VBox prefWidth="200" minWidth="200">
+        <AnchorPane fx:id="title"
+                    styleClass="title"
+                    maxWidth="Infinity"
+                    prefHeight="60"
+                    minHeight="60"
+                    maxHeight="Infinity">
+            <HBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+                <FontIcon iconLiteral="bi-camera-fill"/>
+                <Label HBox.hgrow="ALWAYS" text="stereoCam"/>
+            </HBox>
+        </AnchorPane>
+        <AnchorPane fx:id="sidebar"
+                    styleClass="sidebar"
+                    maxWidth="Infinity"
+                    maxHeight="Infinity"
+                    VBox.vgrow="ALWAYS">
+            <VBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+                <Button fx:id="sidebar_btn_camera" onAction="#handleCameraButtonAction" maxWidth="Infinity">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-sliders"/>
+                    </graphic>
+                    <text>
+                        ADJUST
+                    </text>
+                </Button>
+                <Button fx:id="sidebar_btn_calibrate" onAction="#handleCalibrateButtonAction" maxWidth="Infinity">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-grid-3x3"/>
+                    </graphic>
+                    <text>
+                        CALIBRATE
+                    </text>
+                </Button>
+                <Button fx:id="sidebar_btn_capture" onAction="#handleCaptureButtonAction" maxWidth="Infinity">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-film"/>
+                    </graphic>
+                    <text>
+                        CAPTURE
+                    </text>
+                </Button>
+                <Pane VBox.vgrow="ALWAYS"/>
+                <Button fx:id="sidebar_btn_exit" id="exit_button" onAction="#handleExitButtonAction" maxWidth="Infinity">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-x"/>
+                    </graphic>
+                </Button>
+            </VBox>
+        </AnchorPane>
+    </VBox>
+    <VBox HBox.hgrow="ALWAYS">
+        <AnchorPane fx:id="header"
+                    styleClass="header"
+                    prefHeight="60" minHeight="60"
+                    maxWidth="Infinity"
+                    maxHeight="Infinity">
+            <HBox alignment="CENTER_LEFT" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0">
+                <Button fx:id="swapSwitch" text="SWAP" id="flip_button" disable="true" onAction="#handleSwapButton">
+                    <graphic>
+                        <FontIcon iconLiteral="bi-arrow-left-right"/>
+                    </graphic>
+                </Button>
+                <Label HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                <Label text="ON/OFF"/>
+                <ToggleSwitch fx:id="cameraSwitch" scaleX="1.5" scaleY="1.5">
+                    <padding>
+                        <Insets top="5" left="5" right="15" bottom="5"/>
+                    </padding>
+                </ToggleSwitch>
+            </HBox>
+        </AnchorPane>
+        <ScrollPane minWidth="200" VBox.vgrow="ALWAYS" vbarPolicy="ALWAYS" fitToWidth="true" fitToHeight="true" onMousePressed="#handleScrollPaneClick">
+            <AnchorPane fx:id="pageContent" styleClass="content" maxWidth="Infinity" maxHeight="Infinity"/>
+        </ScrollPane>
+    </VBox>
+</HBox>

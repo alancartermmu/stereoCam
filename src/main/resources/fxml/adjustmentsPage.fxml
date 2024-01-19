@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<AnchorPane xmlns="http://javafx.com/javafx/18"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.view.AdjustmentViewController"
+            AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+    <VBox fx:id="mainCameraArea" styleClass="backdrop" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+        <VBox fx:id="previewPane" styleClass="panel" minWidth="100">
+            <AnchorPane fx:id="previewContainer" style="-fx-background-color: black" minWidth="100" VBox.vgrow="ALWAYS">
+                <ImageView fx:id="previewImageView" preserveRatio="true"/>
+            </AnchorPane>
+        </VBox>
+        <VBox fx:id="imageControlPanel" styleClass="panel" minWidth="250">
+            <Label text="Image Control" styleClass="heading" minWidth="-Infinity" maxWidth="Infinity"/>
+            <VBox fx:id="imageControlPanelContent" styleClass="content" VBox.vgrow="ALWAYS">
+                <GridPane hgap="10">
+                    <VBox GridPane.columnIndex="0">
+                        <VBox>
+                            <Label text="Focus" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Near"/>
+                                <Slider fx:id="slider_focus" blockIncrement="1.0" majorTickUnit="1.0" max="1023.0" min="1.0"
+                                        minorTickCount="0" snapToTicks="true"
+                                        value="1.0"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Far"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Exposure" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Low"/>
+                                <Slider fx:id="slider_exposure"
+                                        max="-1.0" min="-13.0" value="-7.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="High"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Brightness" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Low"/>
+                                <Slider fx:id="slider_brightness"
+                                        max="64.0" min="-64.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="High"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Contrast" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Low"/>
+                                <Slider fx:id="slider_contrast"
+                                        max="64.0" value="32.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="High"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Saturation" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Low"/>
+                                <Slider fx:id="slider_saturation"
+                                        max="128.0" value="64.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="High"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+
+                    <VBox GridPane.columnIndex="1">
+                        <VBox>
+                            <Label text="Gain" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Low"/>
+                                <Slider fx:id="slider_gain"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="High"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Sharpness" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Min"/>
+                                <Slider fx:id="slider_sharpness"
+                                        max="6.0" value="3.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Max"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Gamma" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Min"/>
+                                <Slider fx:id="slider_gamma"
+                                        max="500.0" min="72.0" value="100.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Max"/>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Label text="Backlight Correction" styleClass="heading2"/>
+                            <HBox alignment="CENTER">
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Min"/>
+                                <Slider fx:id="slider_backlight"
+                                        max="2.0"
+                                        blockIncrement="1.0"
+                                        majorTickUnit="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true"
+                                        HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="sliderLabel" alignment="CENTER" text="Max"/>
+                            </HBox>
+                        </VBox>
+                    </VBox>
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50.0" />
+                        <ColumnConstraints percentWidth="50.0" />
+                    </columnConstraints>
+
+                </GridPane>
+
+            </VBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

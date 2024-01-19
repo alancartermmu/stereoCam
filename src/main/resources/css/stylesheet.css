@@ -1,0 +1,173 @@
+* {
+    -fx-font-family: "Carlito";
+    -fx-font-smoothing-type: gray;
+    /*-fx-border-width: 1;
+    -fx-border-color: red;*/
+}
+
+* ImageView {
+    -fx-background-color: #562B9F;
+}
+
+.backdrop {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+/***********
+ * SIDEBAR *
+ ***********/
+
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #462E94, #24184E);
+}
+
+.sidebar * {
+    -fx-text-fill: white;
+    -fx-icon-color: white;
+    -fx-font-weight: bold;
+}
+
+.sidebar Button {
+   -fx-background-color: transparent;
+   -fx-background-radius: 0;
+   -fx-padding: 15;
+   -fx-font-size: 18;
+   -fx-font-weight: bold;
+   -fx-graphic-text-gap: 10;
+}
+
+.sidebar Button:hover {
+    -fx-background-color: #562B9F;
+}
+
+.sidebar Button:default {
+    -fx-background-color: #02864A;
+}
+
+.sidebar Button FontIcon {
+   -fx-icon-size: 22;
+}
+
+#exit_button {
+    -fx-background-color: #BA0632;
+}
+
+#exit_button:hover {
+    -fx-background-color: #800422;
+}
+
+/*********
+ * TITLE *
+ *********/
+
+.title {
+    -fx-alignment: center;
+    -fx-background-color: #2E1E61;
+    -fx-padding: 15;
+}
+
+.title * {
+    -fx-text-fill: white;
+    -fx-icon-color: white;
+    -fx-alignment: center;
+    -fx-background-color: #2E1E61;
+    -fx-spacing: 5;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-icon-size: 28;
+    -fx-padding: 5;
+}
+
+
+/**********
+ * HEADER *
+ **********/
+
+.header {
+    -fx-background-color: #EBEBEB;
+}
+
+.header * {
+    -fx-text-fill: #000000; /* #2E1E61 */
+}
+
+.header .toggle-switch .thumb-area {
+    -fx-background-color: linear-gradient(to bottom, #800422, #BA0632);
+    -fx-border-color: linear-gradient(to bottom, #63031b, #800422);
+     -fx-background-radius: 1em;
+     -fx-border-radius: 1em;
+     -fx-border-width: 1;
+     -fx-background-insets: 0, 1;
+     -fx-padding: 0.75em 1.333333em 0.75em 1.333333em; /* 7 16 7 16 */
+}
+
+.header .toggle-switch:selected .thumb-area {
+    -fx-background-color: linear-gradient(to bottom, #026438, #02864A);
+    -fx-border-color: linear-gradient(to bottom, #01321c, #026438);
+}
+
+.header Label {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.header #flip_button
+{
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.header #flip_button FontIcon
+{
+    -fx-font-size: 20;
+}
+
+/***********
+ * CONTENT *
+ ***********/
+
+.content FontIcon {
+   -fx-icon-size: 20;
+}
+
+/*******************
+ * DASHBOARD PANEL *
+ *******************/
+
+ .panel {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 15, 0, 0, 0);
+    -fx-padding: 0;
+ }
+
+ .panel .heading {
+    -fx-background-radius: 10 10 0 0;
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-icon-size: 28;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: #2E1E61;
+    -fx-padding: 5;
+ }
+
+.panel .content {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-alignment: "CENTER";
+}
+
+.panel .heading2 {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E1E61;
+    -fx-padding: 2 0 5 0;
+}
+
+.sliderLabel {
+    -fx-padding: 0 2 0 2;
+    -fx-min-width: 30;
+}
