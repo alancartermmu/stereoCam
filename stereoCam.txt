@@ -1,0 +1,195 @@
+{
+  "id": "adeca2b8-5c90-4af7-a7ee-f1f71e5c239d",
+  "config": {
+    "api": 700,
+    "codec": 1196444237,
+    "width": 1280,
+    "height": 720,
+    "fps": 30
+  },
+  "address1": 1,
+  "address2": 0,
+  "intrinsics": {
+    "imageSize": {
+      "width": 1280.0,
+      "height": 720.0
+    },
+    "K1": {
+      "fx": 1044.857734595236,
+      "fy": 1042.918430731677,
+      "cx": 658.5973672231928,
+      "cy": 357.061798068427,
+      "skew": 0.0
+    },
+    "K2": {
+      "fx": 1044.523824292252,
+      "fy": 1042.560797807554,
+      "cx": 657.1076304681524,
+      "cy": 363.4685141374455,
+      "skew": 0.0
+    },
+    "D1": {
+      "k1": 0.2001754445183656,
+      "k2": -0.4710781505087328,
+      "k3": 0.2840140423531873,
+      "k4": null,
+      "k5": null,
+      "k6": null,
+      "p1": null,
+      "p2": null,
+      "s1": null,
+      "s2": null,
+      "s3": null,
+      "s4": null,
+      "tau_x": null,
+      "tau_y": null
+    },
+    "D2": {
+      "k1": 0.2080790550281994,
+      "k2": -0.5036125154375903,
+      "k3": 0.3590000596187753,
+      "k4": null,
+      "k5": null,
+      "k6": null,
+      "p1": null,
+      "p2": null,
+      "s1": null,
+      "s2": null,
+      "s3": null,
+      "s4": null,
+      "tau_x": null,
+      "tau_y": null
+    },
+    "E": {
+      "E11": -0.02361877084739417,
+      "E12": -2.888291329253835,
+      "E13": -0.1015115561604092,
+      "E21": 3.000737008250248,
+      "E22": -0.7941843015415251,
+      "E23": 79.16678756028725,
+      "E31": -0.5709762710064208,
+      "E32": -79.16915029577645,
+      "E33": -0.7698860543710722
+    },
+    "F": {
+      "F11": 2.38353776972322E-8,
+      "F12": 2.920199763925314E-6,
+      "F13": -9.513518415007513E-4,
+      "F21": -3.033958525113563E-6,
+      "F22": 8.044699436478338E-7,
+      "F23": -0.08192289985989634,
+      "F31": 0.001688953853000019,
+      "F32": 0.08139634229520981,
+      "F33": 1.0
+    },
+    "R": {
+      "R11": 0.9999658850621712,
+      "R12": -0.008124822160850045,
+      "R13": -0.001488615693603705,
+      "R21": 0.008138919724806976,
+      "R22": 0.9999196124294412,
+      "R23": 0.009722482433475028,
+      "R31": 0.001409502586670622,
+      "R32": -0.009734266475222596,
+      "R33": 0.9999516275093748
+    },
+    "T": {
+      "TX": -79.17491841379486,
+      "TY": -0.07342453905518218,
+      "TZ": 2.8892383221323
+    },
+    "rmsReprojectionError": 0.37547515507118173
+  },
+  "properties": {
+    "properties": [
+      {
+        "name": "AUTO_EXPOSURE",
+        "id": 21,
+        "currentValue": 0.25,
+        "defaultValue": 0.25,
+        "minValue": 0.25,
+        "maxValue": 0.75
+      },
+      {
+        "name": "EXPOSURE",
+        "id": 15,
+        "currentValue": -6.0,
+        "defaultValue": -7.0,
+        "minValue": -13.0,
+        "maxValue": -1.0
+      },
+      {
+        "name": "BRIGHTNESS",
+        "id": 10,
+        "currentValue": 0.0,
+        "defaultValue": 0.0,
+        "minValue": -64.0,
+        "maxValue": 64.0
+      },
+      {
+        "name": "CONTRAST",
+        "id": 11,
+        "currentValue": 31.0,
+        "defaultValue": 32.0,
+        "minValue": 0.0,
+        "maxValue": 64.0
+      },
+      {
+        "name": "SATURATION",
+        "id": 12,
+        "currentValue": 63.0,
+        "defaultValue": 64.0,
+        "minValue": 0.0,
+        "maxValue": 128.0
+      },
+      {
+        "name": "GAIN",
+        "id": 14,
+        "currentValue": 78.0,
+        "defaultValue": 0.0,
+        "minValue": 0.0,
+        "maxValue": 100.0
+      },
+      {
+        "name": "SHARPNESS",
+        "id": 20,
+        "currentValue": 3.0,
+        "defaultValue": 3.0,
+        "minValue": 0.0,
+        "maxValue": 6.0
+      },
+      {
+        "name": "GAMMA",
+        "id": 22,
+        "currentValue": 72.0,
+        "defaultValue": 100.0,
+        "minValue": 72.0,
+        "maxValue": 500.0
+      },
+      {
+        "name": "BACKLIGHT_CORRECTION",
+        "id": 32,
+        "currentValue": 2.0,
+        "defaultValue": 0.0,
+        "minValue": 0.0,
+        "maxValue": 2.0
+      },
+      {
+        "name": "AUTOFOCUS",
+        "id": 39,
+        "currentValue": 0.0,
+        "defaultValue": 0.0,
+        "minValue": 0.0,
+        "maxValue": 1.0
+      },
+      {
+        "name": "FOCUS",
+        "id": 28,
+        "currentValue": 257.0,
+        "defaultValue": 0.0,
+        "minValue": 0.0,
+        "maxValue": 1023.0
+      }
+    ]
+  }
+}
